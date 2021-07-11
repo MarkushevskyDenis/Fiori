@@ -1,0 +1,23 @@
+[
+    {
+        "CategoryID": 1,
+        "CategoryName": "category 1",
+        "Description": "description 1",
+        "Picture": 11101100101
+
+    },
+    {
+        "CategoryID": 2,
+        "CategoryName": "category 2",
+        "Description": "description 2",
+        "Picture": 111010100101
+
+    },
+    {
+        "CategoryID": 3,
+        "CategoryName": "category 3",
+        "Description": "description 3",
+        "Picture": 11010101
+
+    }
+]
