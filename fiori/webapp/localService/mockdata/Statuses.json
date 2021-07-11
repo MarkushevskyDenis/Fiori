@@ -1,14 +1,14 @@
 [
     {
-        "id": 1,
-        "name": "active"
+        "StatusID": 1,
+        "Name": "active"
     },
     {
-        "id": 2,
-        "name": "new"
+        "StatusID": 2,
+        "Name": "new"
     },
     {
-        "id": 3,
-        "name": "removed"
+        "StatusID": 3,
+        "Name": "removed"
     }
 ]
