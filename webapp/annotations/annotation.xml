@@ -39,11 +39,54 @@
             </Annotations>
             <Annotations Target="NorthwindModel.Category/StatusID">
                 <Annotation Term="Common.Text" Path="Statuses/Name" />
+                <Annotation Term="Common.ValueListWithFixedValues"/>
+                <Annotation Term="Common.ValueList">
+                    <Record Type="Common.ValueListType">
+                        <PropertyValue Property="CollectionPath" String="Statuses" />
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="StatusID" />
+                                    <PropertyValue Property="ValueListProperty" String="StatusID" />
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
             </Annotations>
             <Annotations Target="NorthwindModel.Category/ResponsibleID">
                 <Annotation Term="Common.Text" Path="Responsibles/FirstName" />
+                <Annotation Term="Common.ValueList">
+                    <Record Type="Common.ValueListType">
+                        <PropertyValue Property="CollectionPath" String="Responsibles" />
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="ResponsibleID" />
+                                    <PropertyValue Property="ValueListProperty" String="ResponsibleID" />
+                                </Record>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="Responsibles/FirstName" />
+                                    <PropertyValue Property="ValueListProperty" String="FirstName" />
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
             </Annotations>
             <Annotations Target="NorthwindModel.Category">
+                <Annotation Term="UI.HeaderInfo">
+                    <Record Type="UI.HeaderInfoType">
+                        <PropertyValue Property="TypeName" String="{@i18n>category}" />
+                        <PropertyValue Property="TypeNamePlural" String="{@i18n>appTitle}" />
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.SelectionFields">
+                    <Collection>
+                        <PropertyPath>ResponsibleID</PropertyPath>
+                        <PropertyPath>StatusID</PropertyPath>
+                    </Collection>
+                </Annotation>
                 <Annotation Term="UI.LineItem">
                     <Collection>
                         <Record Type="UI.DataField">

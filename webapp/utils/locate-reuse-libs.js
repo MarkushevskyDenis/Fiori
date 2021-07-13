@@ -106,6 +106,18 @@ sap.registerComponentDependencyPaths(manifestUri)
         jQuery.sap.log.error(error);
     })
     .finally(function () {
+
+        // setting the app title with internationalization 
+        sap.ui.getCore().attachInit(function () {
+            jQuery.sap.require("jquery.sap.resources");
+            var sLocale = sap.ui.getCore().getConfiguration().getLanguage();
+            var oBundle = jQuery.sap.resources({
+                url: "i18n/i18n.properties",
+                locale: sLocale,
+            });
+            document.title = oBundle.getText("appTitle");
+        });
+
         if (componentName && componentName.length > 0) {
             if (useMockserver && useMockserver === "true") {
                 sap.ui.getCore().attachInit(function () {

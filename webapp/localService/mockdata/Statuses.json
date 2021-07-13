@@ -1,0 +1,14 @@
+[
+    {
+        "StatusID": 1,
+        "Name": "active"
+    },
+    {
+        "StatusID": 2,
+        "Name": "new"
+    },
+    {
+        "StatusID": 3,
+        "Name": "removed"
+    }
+]

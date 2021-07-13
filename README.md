@@ -1,20 +1,21 @@
 ## Application Details
 |               |
 | ------------- |
-|**Generation Date and Time**<br>Mon Jul 12 2021 15:58:24 GMT+0300 (Moscow Standard Time)|
+|**Generation Date and Time**<br>Sun Jul 11 2021 17:17:09 GMT+0300 (Москва, стандартное время)|
 |**App Generator**<br>@sap/generator-fiori|
-|**App Generator Version**<br>1.2.3|
+|**App Generator Version**<br>1.2.4|
 |**Generation Platform**<br>Visual Studio Code|
-|**Floorplan Used**<br>List Report Object Page V4|
-|**Service Type**<br>OData Url|
-|**Service URL**<br>https://services.odata.org/TripPinRESTierService/(S(qgy4tnwao54wmwqpjo3kwgqn))/
+|**Floorplan Used**<br>List Report Object Page V2|
+|**Service Type**<br>File|
+|**Metadata File**<br>$metadata.xml
 |**Module Name**<br>fiori|
-|**Application Title**<br>Airlines|
-|**Namespace**<br>|
+|**Application Title**<br>Categories|
+|**Namespace**<br>by.smartpro.fioritest|
 |**UI5 Theme**<br>sap_fiori_3|
 |**UI5 Version**<br>Latest|
 |**Enable Telemetry**<br>True|
-|**Main Entity**<br>Airlines|
+|**Main Entity**<br>Categories|
+|**Navigation Entity**<br>None|
 
 ## fiori
 
@@ -26,12 +27,6 @@ A Fiori application.
 
 ```
     npm start
-```
-
-- It is also possible to run the application using mock data that reflects the OData Service URL supplied during application generation.  In order to run the application with Mock Data, run the following from the generated app root folder:
-
-```
-    npm run start-mock
 ```
 
 #### Pre-requisites:

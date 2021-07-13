@@ -2,48 +2,43 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Start fiori",
+            "name": "Start fiori Mock",
             "type": "node",
             "request": "launch",
-            "runtimeExecutable": "npm",
             "cwd": "${workspaceFolder}",
+            "runtimeExecutable": "npm",
             "windows": {
                 "runtimeExecutable": "npm.cmd"
             },
             "runtimeArgs": [
                 "run-script",
-                "start"
+                "start-mock"
             ],
             "console": "integratedTerminal",
             "internalConsoleOptions": "neverOpen",
             "port": 9229,
-            "env": {
-                "DEBUG": "--inspect"
-            }
+            "env": {}
         },
         {
-            "name": "Start fiori with UI5 Version",
+            "name": "Start fiori Mock with UI5 Version",
             "type": "node",
             "request": "launch",
-            "runtimeExecutable": "npm",
             "cwd": "${workspaceFolder}",
+            "runtimeExecutable": "npm",
             "windows": {
                 "runtimeExecutable": "npm.cmd"
             },
             "runtimeArgs": [
                 "run-script",
-                "start"
+                "start-mock"
             ],
             "args": [
                 "--",
-                "${input:UI5VersionV4}"
+                "${input:UI5Version}"
             ],
             "console": "integratedTerminal",
             "internalConsoleOptions": "neverOpen",
-            "port": 9229,
-            "env": {
-                "DEBUG": "--inspect"
-            }
+            "port": 9229
         },
         {
             "name": "Start fiori Local",
@@ -66,9 +61,9 @@
     ],
     "inputs": [
         {
-            "id": "UI5VersionV4",
+            "id": "UI5Version",
             "type": "command",
-            "command": "sap.ux.appGenerator.ui5VersionV4"
+            "command": "sap.ux.appGenerator.ui5Version"
         }
     ]
 }
