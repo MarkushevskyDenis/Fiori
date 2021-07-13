@@ -96,7 +96,6 @@
                 "type": "sap.ui.model.resource.ResourceModel",
                 "uri": "i18n/ObjectPage/Categories/i18n.properties"
             },
-            
             "": {
                 "dataSource": "mainService",
                 "preload": true,
@@ -111,7 +110,22 @@
             }
         },
         "extends": {
-            "extensions": {}
+            "extensions": {
+                "sap.ui.viewExtensions": {
+                    "sap.suite.ui.generic.template.ListReport.view.ListReport": {
+                        "ResponsiveTableColumnsExtension|Categories": {
+                            "type": "XML",
+                            "className": "sap.ui.core.Fragment",
+                            "fragmentName": "by.smartpro.fioritest.fiori.ext.fragments.customColumn"
+                        },
+                        "ResponsiveTableCellsExtension|Categories": {
+                            "className": "sap.ui.core.Fragment",
+                            "fragmentName": "by.smartpro.fioritest.fiori.ext.fragments.customCell",
+                            "type": "XML"
+                        }
+                    }
+                }
+            }
         },
         "contentDensities": {
             "compact": true,

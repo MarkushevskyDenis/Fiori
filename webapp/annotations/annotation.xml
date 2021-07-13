@@ -30,7 +30,7 @@
                 </Annotation>
                 <Annotation Term="Capabilities.SearchRestrictions">
                     <Record Type="Capabilities.SearchRestrictionsType">
-                        <PropertyValue Property="Searchable" Bool="false" />
+                        <PropertyValue Property="Searchable" Bool="true" />
                     </Record>
                 </Annotation>
             </Annotations>
