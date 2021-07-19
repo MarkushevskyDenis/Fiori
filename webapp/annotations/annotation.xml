@@ -114,6 +114,7 @@
                 <Annotation Term="UI.Facets">
                     <Collection>
                         <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="ID"/>
                             <PropertyValue Property="Label" String="{@i18n>general}" />
                             <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#ObjectPage" />
                         </Record>

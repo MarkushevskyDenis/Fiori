@@ -8,7 +8,8 @@
         "ResponsibleID": 1,
         "StatusID": 1,
         "Total": 2,
-        "ProductAvailability": 2112.213
+        "ProductAvailability": 2112.213,
+        "Image": "\\image\\Landscape-Color.jpg"
     },
     {
         "CategoryID": 2,
@@ -19,7 +20,8 @@
         "ResponsibleID": 2,
         "StatusID": 2,
         "Total": 1,
-        "ProductAvailability": 21132.123
+        "ProductAvailability": 21132.123,
+        "Image": "\\image\\strawberry.jfif"
     },
     {
         "CategoryID": 3,
@@ -30,7 +32,8 @@
         "ResponsibleID": 3,
         "StatusID": 3,
         "Total": 1,
-        "ProductAvailability": 21.213
+        "ProductAvailability": 21.213,
+        "Image": "\\image\\cherry.jfif"
     },
     {
         "CategoryID": 4,
@@ -41,6 +44,7 @@
         "ResponsibleID": 1,
         "StatusID": 1,
         "Total": 2,
-        "ProductAvailability": 12213.213
+        "ProductAvailability": 12213.213,
+        "Image": "\\image\\banana.jfif"
     }
 ]

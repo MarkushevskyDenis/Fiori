@@ -112,16 +112,15 @@
         "extends": {
             "extensions": {
                 "sap.ui.viewExtensions": {
-                    "sap.suite.ui.generic.template.ListReport.view.ListReport": {
-                        "ResponsiveTableColumnsExtension|Categories": {
+                    "sap.suite.ui.generic.template.ListReport.view.ListReport": {},
+                    "sap.suite.ui.generic.template.ObjectPage.view.Details": {
+                        "AfterFacet|Categories|com.sap.vocabularies.UI.v1.FieldGroup::ObjectPage": {
                             "type": "XML",
-                            "className": "sap.ui.core.Fragment",
-                            "fragmentName": "by.smartpro.fioritest.fiori.ext.fragments.customColumn"
-                        },
-                        "ResponsiveTableCellsExtension|Categories": {
-                            "className": "sap.ui.core.Fragment",
-                            "fragmentName": "by.smartpro.fioritest.fiori.ext.fragments.customCell",
-                            "type": "XML"
+                            "className": "sap.ui.core.mvc.View",
+                            "viewName": "by.smartpro.fioritest.fiori.ext.view.image",
+                            "sap.ui.generic.app": {
+                                "title": "{@i18n>image}"
+                            }
                         }
                     }
                 },
