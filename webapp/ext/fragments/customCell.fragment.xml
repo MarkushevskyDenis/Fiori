@@ -1,3 +1,11 @@
 <core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m">
-       <Text text="{Total}" />
+
+       <items>
+              <ColumnListItem>
+                     <cells>
+                            <Text text="{Total}" />
+                     </cells>
+              </ColumnListItem>
+       </items>
+
 </core:FragmentDefinition> 
