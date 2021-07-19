@@ -75,20 +75,19 @@
                 </Annotation>
             </Annotations>
             <Annotations Target="NorthwindModel.Category">
-                <Annotation Term="UI.DataPoint" Qualifier="ProgressBar">
-                    <Record Type="UI.DataPointType">
-                        <PropertyValue Property="Value" Path="ProductAvailability" />
-                        <PropertyValue Property="Title" String="{@i18n>productavailability}" />
-                        <PropertyValue Property="TargetValue" Int="100" />
-                        <PropertyValue Property="Criticality" EnumMember="UI.CriticalityType/Positive" />
-                        <PropertyValue Property="Visualization" EnumMember="UI.VisualizationType/Progress" />
-                    </Record>
-                </Annotation>
                 <Annotation Term="UI.HeaderInfo">
                     <Record Type="UI.HeaderInfoType">
                         <PropertyValue Property="TypeName" String="{@i18n>category}" />
                         <PropertyValue Property="TypeNamePlural" String="{@i18n>appTitle}" />
                     </Record>
+                </Annotation>
+                <Annotation Term="UI.Facets">
+                    <Collection>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Label" String="{@i18n>general}" />
+                            <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#ObjectPage" />
+                        </Record>
+                    </Collection>
                 </Annotation>
                 <Annotation Term="UI.SelectionFields">
                     <Collection>
@@ -96,9 +95,49 @@
                         <PropertyPath>StatusID</PropertyPath>
                     </Collection>
                 </Annotation>
+                <Annotation Term="UI.FieldGroup" Qualifier="ObjectPage">
+                    <Record Type="UI.FieldGroupType">
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="CategoryID" />
+                                    <PropertyValue Property="Label" String="{@i18n>category}" />
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="Description" />
+                                    <PropertyValue Property="Label" String="{@i18n>Description}" />
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="Picture" />
+                                    <PropertyValue Property="Label" String="{@i18n>picture}" />
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="ProductID" />
+                                    <PropertyValue Property="Label" String="{@i18n>product}" />
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="ResponsibleID" />
+                                    <PropertyValue Property="Label" String="{@i18n>responsible}" />
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="StatusID" />
+                                    <PropertyValue Property="Label" String="{@i18n>status}" />
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.DataPoint" Qualifier="ProgressBar">
+                    <Record Type="UI.DataPointType" >
+                        <PropertyValue Property="Value" Path="ProductAvailability" />
+                        <PropertyValue Property="Title" String="{@i18n>productavailability}" />
+                        <PropertyValue Property="TargetValue" Int="100" />
+                        <PropertyValue Property="Criticality" EnumMember="UI.CriticalityType/Positive" />
+                        <PropertyValue Property="Visualization" EnumMember="UI.VisualizationType/Progress" />
+                    </Record>
+                </Annotation>
                 <Annotation Term="UI.LineItem">
                     <Collection>
-              
                         <Record Type="UI.DataField">
                             <PropertyValue Property="Value" Path="CategoryID" />
                             <PropertyValue Property="Label" String="{@i18n>category}" />
