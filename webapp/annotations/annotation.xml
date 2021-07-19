@@ -12,7 +12,7 @@
         <edmx:Include Namespace="com.sap.vocabularies.Communication.v1" Alias="Communication" />
     </edmx:Reference>
     <edmx:Reference Uri="/here/goes/your/serviceurl/$metadata">
-        <edmx:Include Namespace="NorthwindModel" />
+        <edmx:Include Alias="Metadata" Namespace="NorthwindModel" />
         <edmx:Include Namespace="ODataWeb.Northwind.Model" />
     </edmx:Reference>
     <edmx:DataServices>
@@ -30,9 +30,29 @@
                 </Annotation>
                 <Annotation Term="Capabilities.SearchRestrictions">
                     <Record Type="Capabilities.SearchRestrictionsType">
-                        <PropertyValue Property="Searchable" Bool="true" />
+                        <PropertyValue Property="Searchable" Bool="false" />
                     </Record>
                 </Annotation>
+            </Annotations>
+            <Annotations Target="ODataWeb.Northwind.Model.NorthwindEntities/Products">
+                <Annotation Term="Capabilities.DeleteRestrictions">
+                    <Record Type="Capabilities.DeleteRestrictionsType">
+                        <PropertyValue Property="Deletable" Bool="false" />
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.InsertRestrictions">
+                    <Record Type="Capabilities.InsertRestrictionsType">
+                        <PropertyValue Property="Insertable" Bool="false" />
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.SearchRestrictions">
+                    <Record Type="Capabilities.SearchRestrictionsType">
+                        <PropertyValue Property="Searchable" Bool="false" />
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="Metadata.Product/ProductID">
+                <Annotation Term="Common.Text" Path="ProductName" />
             </Annotations>
             <Annotations Target="NorthwindModel.Category/CategoryID">
                 <Annotation Term="Common.Text" Path="CategoryName" />
@@ -84,7 +104,7 @@
                         </PropertyValue>
                         <PropertyValue Property="Description">
                             <Record Type="UI.DataField">
-                                <PropertyValue Property="Value" Path="Description"/>
+                                <PropertyValue Property="Value" Path="Description" />
                             </Record>
                         </PropertyValue>
                         <PropertyValue Property="TypeName" String="{@i18n>category}" />
@@ -96,6 +116,10 @@
                         <Record Type="UI.ReferenceFacet">
                             <PropertyValue Property="Label" String="{@i18n>general}" />
                             <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#ObjectPage" />
+                        </Record>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Label" String="{@i18n>products}" />
+                            <PropertyValue Property="Target" AnnotationPath="Products/@UI.LineItem" />
                         </Record>
                     </Collection>
                 </Annotation>
@@ -146,10 +170,10 @@
                         <PropertyValue Property="Visualization" EnumMember="UI.VisualizationType/Progress" />
                     </Record>
                 </Annotation>
-                <Annotation Term="UI.DataPoint" >
+                <Annotation Term="UI.DataPoint">
                     <Record Type="UI.DataPointType">
-                        <PropertyValue Property="Title" String="{@i18n>status}"/>
-                        <PropertyValue Property="Value" Path="Statuses/Name"/>
+                        <PropertyValue Property="Title" String="{@i18n>status}" />
+                        <PropertyValue Property="Value" Path="Statuses/Name" />
                     </Record>
                 </Annotation>
                 <Annotation Term="UI.LineItem">
@@ -180,6 +204,18 @@
                         </Record>
                         <Record Type="UI.DataFieldForAnnotation">
                             <PropertyValue Property="Target" AnnotationPath="@UI.DataPoint#ProgressBar" />
+                        </Record>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="NorthwindModel.Product">
+                <Annotation Term="UI.LineItem">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="ProductID" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="QuantityPerUnit" />
                         </Record>
                     </Collection>
                 </Annotation>

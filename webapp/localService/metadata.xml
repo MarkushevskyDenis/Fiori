@@ -15,6 +15,7 @@
                 <Property Name="StatusID" Type="Edm.Int32" Nullable="true" />
                 <Property Name="Total" Type="Edm.Int32" Nullable="true" />
                 <Property Name="ProductAvailability" Type="Edm.decimal" Nullable="true" />
+                <NavigationProperty Name="Products" Relationship="NorthwindModel.FK_Products_Categories" FromRole="Categories" ToRole="Products"/>
                 <NavigationProperty Name="Responsibles" Relationship="NorthwindModel.FK_Categories_Responsibles" FromRole="Categories" ToRole="Responsibles" />
                 <NavigationProperty Name="Statuses" Relationship="NorthwindModel.FK_Categories_Statuses" FromRole="Categories" ToRole="Statuses" />
             </EntityType>
