@@ -129,7 +129,23 @@
                         "controllerName": "by.smartpro.fioritest.fiori.ext.controller.ObjectPageExt",
                         "sap.ui.generic.app": {
                             "Categories": {
-                                "EntitySet": "Categories"
+                                "EntitySet": "Categories",
+                                "Header": {
+                                    "Actions": {
+                                        "REPLACE_WITH_ACTION_ID": {
+                                            "id": "Activate",
+                                            "text": "Activate",
+                                            "press": "onActivate",
+                                            "determining": true
+                                        },
+                                        "REPLACE_WITH_ACTION_ID1": {
+                                            "id": "Hello",
+                                            "text": "Hello",
+                                            "press": "onHello",
+                                            "determining": false
+                                        }
+                                    }
+                                }
                             }
                         }
                     }

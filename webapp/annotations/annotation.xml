@@ -20,7 +20,7 @@
             <Annotations Target="ODataWeb.Northwind.Model.NorthwindEntities/Categories">
                 <Annotation Term="Capabilities.DeleteRestrictions">
                     <Record Type="Capabilities.DeleteRestrictionsType">
-                        <PropertyValue Property="Deletable" Bool="false" />
+                        <PropertyValue Property="Deletable" Bool="true" />
                     </Record>
                 </Annotation>
                 <Annotation Term="Capabilities.InsertRestrictions">
@@ -95,6 +95,7 @@
                 </Annotation>
             </Annotations>
             <Annotations Target="NorthwindModel.Category">
+            
                 <Annotation Term="UI.HeaderInfo">
                     <Record Type="UI.HeaderInfoType">
                         <PropertyValue Property="Title">

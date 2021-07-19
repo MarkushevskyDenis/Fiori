@@ -3,7 +3,7 @@
         "ProductID": 1,
         "ProductName": "name 1",
         "SupplierID": 1,
-        "CategoryID": 1,
+        "CategoryID": ,
         "QuantityPerUnit": "unit 1",
         "UnitPrice": 0.1,
         "UnitsInStock": 1,
