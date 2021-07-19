@@ -77,6 +77,16 @@
             <Annotations Target="NorthwindModel.Category">
                 <Annotation Term="UI.HeaderInfo">
                     <Record Type="UI.HeaderInfoType">
+                        <PropertyValue Property="Title">
+                            <Record Type="UI.DataField">
+                                <PropertyValue Property="Value" Path="CategoryName" />
+                            </Record>
+                        </PropertyValue>
+                        <PropertyValue Property="Description">
+                            <Record Type="UI.DataField">
+                                <PropertyValue Property="Value" Path="Description"/>
+                            </Record>
+                        </PropertyValue>
                         <PropertyValue Property="TypeName" String="{@i18n>category}" />
                         <PropertyValue Property="TypeNamePlural" String="{@i18n>appTitle}" />
                     </Record>
@@ -128,12 +138,18 @@
                     </Record>
                 </Annotation>
                 <Annotation Term="UI.DataPoint" Qualifier="ProgressBar">
-                    <Record Type="UI.DataPointType" >
+                    <Record Type="UI.DataPointType">
                         <PropertyValue Property="Value" Path="ProductAvailability" />
                         <PropertyValue Property="Title" String="{@i18n>productavailability}" />
                         <PropertyValue Property="TargetValue" Int="100" />
                         <PropertyValue Property="Criticality" EnumMember="UI.CriticalityType/Positive" />
                         <PropertyValue Property="Visualization" EnumMember="UI.VisualizationType/Progress" />
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.DataPoint" >
+                    <Record Type="UI.DataPointType">
+                        <PropertyValue Property="Title" String="{@i18n>status}"/>
+                        <PropertyValue Property="Value" Path="Statuses/Name"/>
                     </Record>
                 </Annotation>
                 <Annotation Term="UI.LineItem">
