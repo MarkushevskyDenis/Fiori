@@ -107,6 +107,7 @@
                     <End Role="Products" EntitySet="Products" />
                     <End Role="Categories" EntitySet="Categories" />
                 </AssociationSet>
+                <FunctionImport Name="toActiveStatus" EntitySet="Categories" m:HttpMethod="GET"></FunctionImport>
             </EntityContainer>
         </Schema>
     </edmx:DataServices>
