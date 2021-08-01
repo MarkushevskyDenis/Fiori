@@ -8,7 +8,7 @@
 |**Floorplan Used**<br>List Report Object Page V2|
 |**Service Type**<br>File|
 |**Metadata File**<br>$metadata.xml
-|**Module Name**<br>fiori|
+|**Module Name**<br>fiori|dfsadfsdf
 |**Application Title**<br>Categories|
 |**Namespace**<br>by.smartpro.fioritest|
 |**UI5 Theme**<br>sap_fiori_3|
